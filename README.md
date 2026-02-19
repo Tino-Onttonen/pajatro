@@ -73,20 +73,20 @@ Follow these steps to get a local copy of the game running on your machine.
 ## Project Structure
 
 ```
-📦 pajatro/
-├─ 📁 design/             # Design documents & assets
-│  ├─ 📁 documents/
-│  └─📁 assets/
-│    ├─ 📁 sounds/        # Music, SFX
-│    └─ 📁 sprites/       # 2D sprites & textures
-├─ 📁 project/
-│  └─ 📁 scenes/
-│     ├─ 📁 game/         # Level scenes
-│     └─ 📁 ui/           # UI scenes & scripts
-├─ 📄 .gitignore
-├─ 📄 project.godot       # Godot project file
-├─ 📄 LICENSE
-└─ 📄 README.md
+pajatro/
+├─ design/             # Design documents & assets
+│  ├─ documents/
+│  └- assets/
+│    ├─ sounds/        # Music, SFX
+│    └─ sprites/       # 2D sprites & textures
+├─ project/
+│  └─ scenes/
+│     ├─ game/         # Level scenes
+│     └─ ui/           # UI scenes & scripts
+├─ project.godot       # Godot project file
+├─ .gitignore
+├─ LICENSE
+└─ README.md
 ```
 ---
 
