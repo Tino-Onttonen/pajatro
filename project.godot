@@ -15,12 +15,14 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="Projekti"
+run/main_scene="uid://d2w28gixusxuw"
 config/features=PackedStringArray("4.6", "Mobile")
 config/icon="res://Assets/Arts/icon.svg"
 
 [display]
 
-window/size/viewport_width=1138
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [dotnet]
 

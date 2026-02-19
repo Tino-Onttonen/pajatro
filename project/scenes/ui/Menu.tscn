@@ -1,3 +1,37 @@
 [gd_scene format=3 uid="uid://d2w28gixusxuw"]
 
-[node name="Menu" type="Node2D" unique_id=125220211]
+[node name="Menu" type="Control" unique_id=1775801397]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1138.0
+offset_bottom = -648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="mainMenu" type="Control" parent="." unique_id=52440065]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="settingsMenu" type="Control" parent="." unique_id=1332327692]
+anchors_preset = 0
+offset_left = 1680.0
+offset_top = 60.0
+offset_right = 1856.0
+offset_bottom = 232.0
+
+[node name="Button" type="Button" parent="settingsMenu" unique_id=156654295]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="menuBgColor" type="ColorRect" parent="." unique_id=2079947739]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.3882353, 0.050980393, 0.14901961, 1)
