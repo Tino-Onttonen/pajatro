@@ -1,4 +1,9 @@
+OptionButton
 Button
+HSlider
+VBoxContainer
+PanelContainer
+Label
 ColorRect
 TextureRect
 Control
