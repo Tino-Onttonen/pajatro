@@ -1,9 +1,10 @@
+Label
+TextureRect
+Control
+Container
 OptionButton
 Button
 HSlider
 VBoxContainer
 PanelContainer
-Label
 ColorRect
-TextureRect
-Control
