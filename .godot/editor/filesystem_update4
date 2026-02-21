@@ -1,1 +1,7 @@
+res://project/scenes/gameloop/token.tscn
+res://project/scenes/gameloop/game_world.tscn
+res://project/scenes/gameloop/Token.cs
+res://design/documents/Camera.md
+res://design/documents/MobileInput.md
 res://project/scenes/ui/Menu.tscn
+res://project/scenes/gameloop/GameWorld.cs

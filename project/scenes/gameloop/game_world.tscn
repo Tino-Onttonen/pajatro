@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://ba2ry7r76fgyq"]
+
+[ext_resource type="PackedScene" uid="uid://7hjnr6xlmfpj" path="res://project/scenes/gameloop/board.tscn" id="1_b7eev"]
+[ext_resource type="Script" uid="uid://cuxi36o2kdd6g" path="res://project/scenes/gameloop/GameWorld.cs" id="1_evhe5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b7eev"]
+size = Vector2(88, 2)
+
+[node name="GameWorld" type="Node2D" unique_id=930194677]
+script = ExtResource("1_evhe5")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=44617505]
+
+[node name="Board" parent="." unique_id=1341319005 instance=ExtResource("1_b7eev")]
+scale = Vector2(1.8, 1.8)
+
+[node name="BottomArea" type="Area2D" parent="." unique_id=1559933362]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomArea" unique_id=1041476800]
+position = Vector2(1, 485)
+shape = SubResource("RectangleShape2D_b7eev")
+
+[node name="Tokens" type="Node2D" parent="." unique_id=169143057]
