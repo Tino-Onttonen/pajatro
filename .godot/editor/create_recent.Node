@@ -8,5 +8,13 @@ Sprite2D
 RigidBody2D
 Button
 ColorRect
+Label
 TextureRect
 Control
+Container
+OptionButton
+Button
+HSlider
+VBoxContainer
+PanelContainer
+ColorRect

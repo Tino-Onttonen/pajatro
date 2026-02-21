@@ -1,39 +1,123 @@
 [gd_scene format=3 uid="uid://d2w28gixusxuw"]
 
+[ext_resource type="Texture2D" uid="uid://bwol6ntcty80r" path="res://design/assets/sprites/fi.png" id="1_ax5xx"]
+[ext_resource type="Script" uid="uid://c363g61bjdthr" path="res://project/scenes/ui/Menu.cs" id="1_y88u5"]
+[ext_resource type="Texture2D" uid="uid://comcbh8i3rgn8" path="res://design/assets/sprites/example_banner.png" id="2_4bb0t"]
+[ext_resource type="Texture2D" uid="uid://c6vkf1smamav3" path="res://design/assets/sprites/uk.png" id="2_y88u5"]
+
 [node name="Menu" type="Control" unique_id=1775801397]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1138.0
-offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_vertical_guides_ = [2.0]
-metadata/_edit_horizontal_guides_ = [253.0]
+script = ExtResource("1_y88u5")
 
-[node name="mainMenu" type="Control" parent="." unique_id=52440065]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="settingsMenu" type="Control" parent="." unique_id=1332327692]
-anchors_preset = 0
-offset_left = 1680.0
-offset_top = 60.0
-offset_right = 1856.0
-offset_bottom = 232.0
-
-[node name="Button" type="Button" parent="settingsMenu" unique_id=156654295]
+[node name="backgroundColor" type="ColorRect" parent="." unique_id=2079947739]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 1.0
-offset_bottom = 1.0
-
-[node name="menuBgColor" type="ColorRect" parent="." unique_id=2079947739]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
 color = Color(0.3882353, 0.050980393, 0.14901961, 1)
+
+[node name="mainMenu" type="Control" parent="." unique_id=571873617]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="titleLogo" type="TextureRect" parent="mainMenu" unique_id=451570519]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.24200001
+anchor_top = 0.042000003
+anchor_right = 0.758
+anchor_bottom = 0.41000003
+offset_left = 0.85998535
+offset_top = -0.36000443
+offset_right = -0.85998535
+offset_bottom = 0.19998169
+grow_horizontal = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
+texture = ExtResource("2_4bb0t")
+expand_mode = 1
+
+[node name="settingsButton" type="Button" parent="mainMenu" unique_id=1037358091]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86800003
+anchor_top = 0.046000004
+anchor_right = 0.97400004
+anchor_bottom = 0.223
+offset_left = -0.5600586
+offset_top = 0.31999588
+offset_right = -0.080078125
+offset_bottom = 0.1599884
+grow_horizontal = 0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 8.09
+text = "Settings"
+
+[node name="playButton" type="Button" parent="mainMenu" unique_id=1634768963]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.321
+anchor_top = 0.642
+anchor_right = 0.679
+anchor_bottom = 0.81900007
+offset_left = -0.8200073
+offset_top = 0.13995361
+offset_right = 0.8199463
+offset_bottom = -0.020080566
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play"
+
+[node name="settingsMenu" type="PanelContainer" parent="." unique_id=1713929653]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.319
+anchor_top = 0.41000003
+anchor_right = 0.68
+anchor_bottom = 0.82400006
+offset_left = 0.52001953
+offset_top = 0.19998169
+offset_right = -0.5999756
+offset_bottom = 0.079956055
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="settingsMenu" unique_id=1382180299]
+layout_mode = 2
+
+[node name="soundName" type="Label" parent="settingsMenu/VBoxContainer" unique_id=765624814]
+layout_mode = 2
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="soundSlider" type="HSlider" parent="settingsMenu/VBoxContainer" unique_id=897462207]
+layout_mode = 2
+value = 100.0
+
+[node name="languageButton" type="OptionButton" parent="settingsMenu/VBoxContainer" unique_id=760361709]
+layout_mode = 2
+item_count = 2
+popup/item_0/text = "Finnish"
+popup/item_0/icon = ExtResource("1_ax5xx")
+popup/item_0/id = 0
+popup/item_1/text = "English"
+popup/item_1/icon = ExtResource("2_y88u5")
+popup/item_1/id = 1
+
+[node name="returnButton" type="Button" parent="settingsMenu/VBoxContainer" unique_id=607520118]
+layout_mode = 2
+text = "Back"
+
+[connection signal="pressed" from="mainMenu/settingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="mainMenu/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="settingsMenu/VBoxContainer/returnButton" to="." method="_on_return_button_pressed"]
