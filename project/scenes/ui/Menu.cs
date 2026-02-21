@@ -24,7 +24,7 @@ public partial class Menu : Control
 	// Play-button pressed -> change scene to gameloop
 	public void _on_play_button_pressed()
 	{
-  		GetTree().ChangeSceneToFile("res://gameloop.tscn");
+  		GetTree().ChangeSceneToFile("res://project/scenes/gameloop/game_world.tscn");
 	}
 	public void _on_return_button_pressed()
 	{
