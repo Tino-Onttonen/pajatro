@@ -10,7 +10,7 @@
 
 ## About The Game
 
-**Pajatro** is a rogue-like/arcade game built with Godot 4.6 & C# where player(s) try to hit the specific sections on the gameboard with a limited amount of coins in order to advance levels.
+Challenge yourself in this nostalgic game from the 90’s remade to a digital version where you as the player try to aim for the specific sections on the gameboard with a limited amount of tokens in order to gain points and advance levels.
 
 > *"The pure joy and nostalgia i've felt playing Pajatro is tremendous"*
 
