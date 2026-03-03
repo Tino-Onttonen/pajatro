@@ -10,7 +10,8 @@
 
 ## About The Game
 
-Challenge yourself in this nostalgic game from the 90’s remade to a digital version where you as the player try to aim for the specific sections on the gameboard with a limited amount of tokens in order to gain points and advance levels.
+Challenge yourself in this nostalgic game from the 90’s remade to a digital version. Pajatro is a game where you as the player try to aim for the specific sections on the gameboard with a limited amount of tokens in order to gain points. To reach the next level, the player must think strategically as each subsequent step depends on them.
+Create your own play style by choosing from a vast arsenal of different power-ups and progress faster through levels in this rogue-like arcade game.
 
 > *"The pure joy and nostalgia i've felt playing Pajatro is tremendous"*
 
