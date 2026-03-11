@@ -1,10 +1,8 @@
-res://project/scenes/gameloop/Slots/slot_50.tscn
-res://project/scenes/gameloop/Slots/slot_20.tscn
-res://project/scenes/gameloop/Slots/slot_10.tscn
-res://project/scenes/gameloop/board.tscn
-res://project/scenes/gameloop/game_world.tscn
-res://project/scenes/gameloop/token.tscn
-res://project/scenes/gameloop/GameWorld.cs
+res://project/scenes/gameloop/Board.cs
 res://project/scenes/ui/Hud.cs
+res://project/scenes/gameloop/GameWorld.cs
 res://project/scenes/gameloop/Token.cs
 res://project/scenes/ui/Menu.cs
+res://project/scenes/gameloop/board.tscn
+res://project/scenes/gameloop/game_world.tscn
+res://project/scenes/ui/hud.tscn

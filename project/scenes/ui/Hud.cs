@@ -8,7 +8,7 @@ public partial class Hud : Control
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		scoreTextLabel = GetNode<Label>("ScoreText");
+		scoreTextLabel = GetNode<Label>("AspectRatioContainer/HBoxContainer/VBoxContainer/Panel/ScoreText");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,13 +17,13 @@ public partial class Hud : Control
 
 	}
 
-	public void addScore(int value)
+	public void setScore(int value)
 	{
 		score += value;
 		updateScoreText("Score : " + score);
 	}
 
-	private void updateScoreText(String text)
+	public void updateScoreText(String text)
 	{
 		scoreTextLabel.Text = text;
 	}

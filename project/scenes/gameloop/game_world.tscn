@@ -28,4 +28,4 @@ shape = SubResource("RectangleShape2D_b7eev")
 [node name="Tokens" type="Node2D" parent="." unique_id=169143057]
 
 [node name="TokenSpawnPoint" type="Marker2D" parent="." unique_id=2132591383]
-position = Vector2(417, -267)
+position = Vector2(417, -281)
