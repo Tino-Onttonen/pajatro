@@ -1,13 +1,40 @@
 [gd_scene format=3 uid="uid://7hjnr6xlmfpj"]
 
-[ext_resource type="Texture2D" uid="uid://51en68upr1ew" path="res://design/assets/sprites/board.png" id="1_kfs6g"]
+[ext_resource type="Texture2D" uid="uid://c601ubsnet7g" path="res://design/assets/sprites/Sadbarh/Board/Board_Background.png" id="1_j1vmi"]
+[ext_resource type="PackedScene" uid="uid://caohih57dv5ly" path="res://project/scenes/gameloop/Slots/slot_50.tscn" id="2_8k37v"]
+[ext_resource type="Texture2D" uid="uid://dg7sgaj2da8oh" path="res://design/assets/sprites/Sadbarh/Board/Board_Foreground.png" id="2_yfq12"]
+[ext_resource type="PackedScene" uid="uid://brfnvdxgyqvku" path="res://project/scenes/gameloop/Slots/slot_10.tscn" id="3_xvoe4"]
+[ext_resource type="PackedScene" uid="uid://ctme3tfa1h20b" path="res://project/scenes/gameloop/Slots/slot_20.tscn" id="4_j1vmi"]
 
 [node name="Board" type="StaticBody2D" unique_id=1341319005]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=922351635]
+[node name="Background" type="Sprite2D" parent="." unique_id=922351635]
 texture_filter = 1
-texture = ExtResource("1_kfs6g")
+position = Vector2(22, 0)
+texture = ExtResource("1_j1vmi")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=634506321]
-position = Vector2(48.41254, 3.0428047)
-polygon = PackedVector2Array(122.58746, -292.04282, 122.58746, -178.0428, 131.58746, -178.0428, 131.58746, -302.04282, -228.41254, -302.04282, -228.41254, 207.9572, -74.41254, 276.95718, -24.41254, 276.95718, 132.58746, 207.9572, 131.58746, -130.0428, 122.58746, -130.0428, 122.58746, 200.9572, -22.41254, 266.95718, -72.41254, 266.95718, -218.41254, 201.9572, -218.41254, -292.04282)
+[node name="Foreground" type="Sprite2D" parent="." unique_id=28738628]
+z_index = 10
+texture_filter = 1
+position = Vector2(22, 0)
+texture = ExtResource("2_yfq12")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1272168409]
+polygon = PackedVector2Array(225, -108, 236, -108, 236, 252, 91, 293, -89, 293, -234, 253, -234, -249, -89, -297, 91, -297, 236, -249, 236, -190, 225, -190, 225, -240, 91, -286, -88, -286, -223, -240, -223, 244, -93, 280, 95, 280, 225, 244)
+
+[node name="Slots" type="Node2D" parent="." unique_id=1222560733]
+position = Vector2(0, -50)
+
+[node name="Slot50" parent="Slots" unique_id=1214621126 instance=ExtResource("2_8k37v")]
+
+[node name="Slot10_2" parent="Slots" unique_id=1003495656 instance=ExtResource("3_xvoe4")]
+position = Vector2(-150, 0)
+
+[node name="Slot20" parent="Slots" unique_id=1096522610 instance=ExtResource("4_j1vmi")]
+position = Vector2(-75, 0)
+
+[node name="Slot10" parent="Slots" unique_id=2131612835 instance=ExtResource("3_xvoe4")]
+position = Vector2(150, 0)
+
+[node name="Slot20_2" parent="Slots" unique_id=1841130984 instance=ExtResource("4_j1vmi")]
+position = Vector2(75, 0)

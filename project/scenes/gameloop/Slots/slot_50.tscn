@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://caohih57dv5ly"]
+
+[ext_resource type="Texture2D" uid="uid://csnfv3oepi1sa" path="res://design/assets/sprites/Sadbarh/Slots/50pSlot_BackGround.png" id="1_7rcta"]
+[ext_resource type="Texture2D" uid="uid://rv1q5crtbqrc" path="res://design/assets/sprites/Sadbarh/Slots/50pSlot_Foreground.png" id="2_7x1p1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7rcta"]
+size = Vector2(4, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7x1p1"]
+size = Vector2(34, 8)
+
+[node name="Slot50" type="StaticBody2D" unique_id=1214621126]
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1086941916]
+texture_filter = 1
+texture = ExtResource("1_7rcta")
+
+[node name="Foreground" type="Sprite2D" parent="." unique_id=400268598]
+z_index = 10
+texture_filter = 1
+texture = ExtResource("2_7x1p1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=477518729]
+position = Vector2(21, 1)
+shape = SubResource("RectangleShape2D_7rcta")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=429137924]
+position = Vector2(-21, 1)
+shape = SubResource("RectangleShape2D_7rcta")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1053785925]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1014438278]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_7x1p1")

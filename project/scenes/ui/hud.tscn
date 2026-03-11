@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dgjnv0cgaxjsy"]
+
+[ext_resource type="Script" uid="uid://reqrqj1e3vue" path="res://project/scenes/ui/Hud.cs" id="1_ah3le"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5cmjh"]
+
+[node name="Hud" type="Control" unique_id=1395888799]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ah3le")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=706614022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AspectRatioContainer" unique_id=1408411351]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/HBoxContainer" unique_id=61355958]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="AspectRatioContainer/HBoxContainer/VBoxContainer" unique_id=2001123725]
+custom_minimum_size = Vector2(500, 1000)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5cmjh")
+
+[node name="ScoreText" type="Label" parent="AspectRatioContainer/HBoxContainer/VBoxContainer/Panel" unique_id=1109841242]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.5703752, 0.01873759, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 7
+theme_override_font_sizes/font_size = 95
+text = "Score: "
+
+[node name="PanelContainer" type="PanelContainer" parent="AspectRatioContainer/HBoxContainer" unique_id=2028421880]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="AspectRatioContainer/HBoxContainer" unique_id=1431241301]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="AspectRatioContainer/HBoxContainer/VBoxContainer2" unique_id=1580226557]
+custom_minimum_size = Vector2(500, 1000)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5cmjh")

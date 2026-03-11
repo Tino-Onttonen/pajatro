@@ -10,6 +10,7 @@ public partial class GameWorld : Node2D
 	private bool canLaunch = true;
 	private bool powerIncreased = false;
 	private int power = 0;
+	private Marker2D tokenSpawnPoint;
 	public int tokensLeft = 5;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -17,6 +18,7 @@ public partial class GameWorld : Node2D
 		token = GD.Load<PackedScene>("res://project/scenes/gameloop/token.tscn");
 		tokens = GetNode<Node2D>("Tokens");
 		bottomArea = GetNode<Area2D>("BottomArea");
+		tokenSpawnPoint = GetNode<Marker2D>("TokenSpawnPoint");
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -41,10 +43,11 @@ public partial class GameWorld : Node2D
 			canLaunch = false;
 			GD.Print("Launching");
 			Token launchingToken = token.Instantiate<Token>();
-			launchingToken.GlobalPosition = new Vector2(316, -248.5f);
+			launchingToken.Position = tokenSpawnPoint.Position;
+			launchingToken.Scale = new Vector2(0.8f, 0.8f);
 			bottomArea.BodyEntered += launchingToken._on_area_2d_body_entered;
 			tokens.AddChild(launchingToken);
-			launchingToken.ApplyImpulse(new Vector2((int)-power, 20 + (int)power), launchingToken.Position);
+			launchingToken.ApplyImpulse(new Vector2((int)-power, (int)-power), launchingToken.Position);
 		}
 		if(tokens.GetChildCount() == 0 && !canLaunch)
 		{

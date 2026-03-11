@@ -1,24 +1,25 @@
 [gd_scene format=3 uid="uid://dmo78kbubetaj"]
 
-[ext_resource type="Texture2D" uid="uid://cod3wpws0gpsn" path="res://design/assets/sprites/token.png" id="1_3h3n5"]
 [ext_resource type="Script" uid="uid://cijlibemi4ljp" path="res://project/scenes/gameloop/Token.cs" id="1_cn8ji"]
+[ext_resource type="Texture2D" uid="uid://makqpl8w2bbw" path="res://design/assets/sprites/Sadbarh/Token/Untitled 5 6.png" id="2_cn8ji"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_cn8ji"]
 friction = 0.11
 bounce = 0.46
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cn8ji"]
-radius = 20.0
+radius = 24.083189
 
 [node name="Token" type="RigidBody2D" unique_id=585528155]
 mass = 0.118
 physics_material_override = SubResource("PhysicsMaterial_cn8ji")
+gravity_scale = 1.5
 script = ExtResource("1_cn8ji")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1325598176]
 texture_filter = 1
 scale = Vector2(1.8, 1.8)
-texture = ExtResource("1_3h3n5")
+texture = ExtResource("2_cn8ji")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28997533]
 shape = SubResource("CircleShape2D_cn8ji")
